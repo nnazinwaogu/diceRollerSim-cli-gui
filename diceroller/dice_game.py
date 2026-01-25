@@ -1,3 +1,8 @@
+"""
+Author: Nnazirim Nwaogu, Big Pickle (OpenZen)
+
+"""
+# Imports
 import random
 import sys
 from typing import List
@@ -12,6 +17,7 @@ if len(sys.argv) > 1 and sys.argv[1] == "--gui":
         print(f"GUI not available: {e}")
         sys.exit(1)
 
+# Core Dice Rolling Functions
 def roll_die(sides: int = 6) -> int:
     """Return a random integer from 1 to sides inclusive."""
     if sides < 1:
@@ -35,6 +41,7 @@ def _format_roll(results: List[int]) -> str:
         total = sum(results)
         return f"You rolled: " + ", ".join(map(str, results)) + f" (total: {total})"
 
+# CLI Banner Graphic
 def print_banner():
     banner = r"""
 ===========================================
@@ -43,6 +50,7 @@ def print_banner():
 """
     print(banner)
 
+# Tests
 def run_tests():
     print("Running tests...")
     try:
@@ -95,6 +103,7 @@ def test_exceptions():
     except ValueError:
         pass
 
+# Main CLI Loop
 def main_loop():
     print_banner()
     print("Welcome to the Dice Roller!")
@@ -124,6 +133,7 @@ def main_loop():
             print(_format_roll(results))
             # loop again to continue rolling with same dice
 
+# Main Function
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == "test":
         run_tests()

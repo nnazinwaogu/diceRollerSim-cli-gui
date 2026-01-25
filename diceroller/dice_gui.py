@@ -1,3 +1,9 @@
+"""
+Author: Nnazirim Nwaogu, Big Pickle (OpenZen)
+
+"""
+
+# Imports
 import tkinter as tk
 from tkinter import ttk, scrolledtext, font
 import random
@@ -27,6 +33,7 @@ def _format_roll(results: List[int]) -> str:
         total = sum(results)
         return f"You rolled: " + ", ".join(map(str, results)) + f" (total: {total})"
 
+# GUI Application
 class DiceRollerGUI:
     def __init__(self, root):
         self.root = root
@@ -144,6 +151,7 @@ class DiceRollerGUI:
         """Handle window close (X button)."""
         self.quit_app()
 
+# Main Function
 def main():
     """Main function to launch the GUI."""
     root = tk.Tk()
