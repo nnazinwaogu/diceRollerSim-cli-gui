@@ -82,7 +82,7 @@ CLI DiceRoller/
 
 ### Code Style
 
-This project follows specific conventions documented in [AGENTS.md](AGENTS.md):
+This project follows specific conventions such as:
 
 - Type hints for all function parameters and return values
 - Consistent `snake_case` naming conventions
